@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        task6 of js
+    </h1>
+    <script>
+        //first ele that is greater than 20
+        let arr = [10, 15, 25, 30, 5];
+        let firstGreater = arr.find(num => num > 20);
+            console.log(firstGreater); // 25
+
+            //first ele less than 20
+          let firstLess = arr.find(num => num < 20);
+        console.log(firstLess); // 10
+        
+
+        //Filter data based on id in array of objects
+        let users = [
+            { id: 1, name: "Alice" },
+            { id: 2, name: "Bob" },
+            { id: 3, name: "Charlie" }
+            ];
+
+            let searchId = 2;
+            let result = users.filter(user => user.id === searchId);
+            console.log(result); // [{ id: 2, name: "Bob" }]
+
+            //Check if element is odd or even in an array
+            let nums = [90, 89, 56, 45];
+
+                nums.forEach(n => {
+                if (n % 2 === 0) {
+                    console.log(n + " is Even");
+                } else {
+                    console.log(n + " is Odd");
+                }
+                });
+
+    </script>
+</body>
+</html>

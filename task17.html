@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+               font-family: Arial, sans-serif;
+            display:flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .card-container{
+            display: flex;
+            gap: 20px;
+
+        }
+        .card{
+            width: 200px;
+              border: 2px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            padding: 15px;
+              box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+
+        }
+        .card img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="class-container" id="cards"></div>
+
+    <script>
+        let cardsdata=[
+            {title:"c1", img :"http://upload.wikimedia.org/wikipedia/commons/e/e7/African_rhinoceros_animal.jpg", description:"first card"},
+            {title:"c2",img :"https://tse4.mm.bing.net/th/id/OIP.-15_9rp1nRdFBCqLgpdtTgHaEK?pid=Api&P=0&h=180", description:"second  card"},
+            {title:"c3", img :"https://tse3.mm.bing.net/th/id/OIP.Acb3GW_ge03KmE1gaCDosgHaFv?pid=Api&P=0&h=180", description:"third  card"}
+    ];
+
+        let container = document.getElementById("cards");
+        cardsdata.forEach(card =>
+        {
+            let div=document.createElement("div");
+            div.className = "card";
+            div.innerHTML = `
+            <img src= "${card.img}" alt="{card.title}">
+            <h3>
+                ${card.title}</h3>
+                <p>
+                    ${card.description}</p>`;
+            container.appendChild(div);
+        }
+        )
+    </script>
+</body>
+</html>

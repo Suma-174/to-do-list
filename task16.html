@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is 16th task</h1>
+    <script>
+        //display even numbers upto n number (ask user for number)
+        let n = int(prompt("Enter a number :"));
+        console.log("Even numbers up to :" +n+ ":");
+        for(let i=2;i<=n;i+=2){
+            console.log(i);
+        }
+
+        //vowel or not
+        let ch = prompt("Enter a character:").toLowerCase();
+
+if (ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o' || ch === 'u') {
+  console.log(ch + " is a vowel");
+} else {
+  console.log(ch + " is a consonant");
+}
+
+//even and odd count
+
+let evenCount = 0;
+let oddCount = 0;
+
+for (let i = 1; i <= 999; i++) {
+  if (i % 2 === 0)
+    evenCount++;
+  else
+    oddCount++;
+}
+
+console.log("Even numbers count: " + evenCount);
+console.log("Odd numbers count: " + oddCount);
+
+
+//count occurance of a string
+
+let str =prompt("Enter a string:");
+let cha = prompt("enter a character :");
+let count=0;
+for(let i=0;i<str.length;i++){
+    if(str[i]==ch)
+    count++;
+}
+console.log(`The count of '${ch}' in "${str}" is ${count}`);
+
+//largest num in array
+
+let arr = [1,10,100,900];
+let largest = arr[0];
+for(let i=1;i<arr.length;i++){
+    if(arr[i]>largest)
+    largest=arr[i];
+}
+console.log("largest num:",largest);
+
+
+
+
+
+    </script>
+</body>
+</html>

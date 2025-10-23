@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    #movieContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: gray;
+      padding: 0 10px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎬 Movie List</h2>
+  <div id="movieContainer"></div>
+
+  <script>
+    // Example API: sample data from OMDb API (requires key)
+    // You can use https://www.omdbapi.com/?s=batman&apikey=YOUR_KEY
+    // For demo, we'll use a free fake API (Mock data)
+    
+    fetch("https://api.tvmaze.com/shows") // Public movie-like data API
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("movieContainer");
+
+        data.slice(0, 9).forEach(movie => { // limit to 9 cards
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <img src="${movie.image ? movie.image.medium : 'https://via.placeholder.com/200'}" alt="${movie.name}">
+            <h3>${movie.name}</h3>
+            <p>Rating: ${movie.rating.average || "N/A"}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(error => console.log("Error fetching movies:", error));
+  </script>
+
+</body>
+</html>

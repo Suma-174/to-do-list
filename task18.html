@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Form Validation</title>
+</head>
+<body>
+
+  <h2>Employee Form</h2>
+
+  <form onsubmit="return validateForm()">
+    Name: <input type="text" id="name"><br><br>
+    Email: <input type="text" id="email"><br><br>
+    Contact: <input type="text" id="contact"><br><br>
+    Age: <input type="number" id="age"><br><br>
+    Designation: <input type="text" id="designation"><br><br>
+    DOB: <input type="date" id="dob"><br><br>
+    Select Files: <input type="file" id="files" multiple><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let contact = document.getElementById("contact").value;
+      let age = document.getElementById("age").value;
+      let designation = document.getElementById("designation").value;
+
+      if (name === "" || email === "" || contact === "" || age === "" || designation === "") {
+        alert("All fields are required!");
+        return false;
+      }
+
+      if (!email.includes("@")) {
+        alert("Enter a valid email!");
+        return false;
+      }
+
+      if (contact.length !== 10) {
+        alert("Contact number must be 10 digits!");
+        return false;
+      }
+
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
+

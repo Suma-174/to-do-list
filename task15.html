@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>task5 of js</h1>
+    <script>
+        //multiple of 3
+        function isMultipleOfThree(num) {
+            return num % 3 === 0;
+            }
+
+            console.log(isMultipleOfThree(10900)); // false
+            console.log(isMultipleOfThree(12));    // true
+
+
+            //Check if a particular sub-word exists in a string
+            let str = "i am learning js";
+            let word = "js";
+
+            if (str.includes(word)) {
+            console.log("Exists");
+            } else {
+            console.log("Does not exist");
+            }
+
+            //calculate compound interest 
+                function simpleInterest(p, r, t) {
+                return (p * r * t) / 100;
+                }
+
+                console.log(simpleInterest(10000, 5, 2)); // 1000
+
+    </script>
+</body>
+</html>

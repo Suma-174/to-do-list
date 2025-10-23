@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Task3 of javascript
+    </h1>
+    <h2>Arrays</h2>
+    <script>
+        let animal = {
+            name: "Tiger",
+            type: "Wild",
+            sound: "Roar"
+            };
+
+            let car = {
+            brand: "Tesla",
+            model: "Model S",
+            year: 2024
+            };
+
+            console.log(animal);
+            console.log(car);
+
+
+            let str = "programming";
+                let chars = str.split("");
+                let duplicates = chars.filter((ch, i) => chars.indexOf(ch) !== i);
+                console.log([...new Set(duplicates)]); 
+
+            let str2 = "hello";
+            let reversed = str2.split("").reverse().join("");
+            console.log(reversed);
+
+                let numbers = [23, 56, 11, 89, 3, 45];
+                let highest = Math.max(numbers);
+                let lowest = Math.min(numbers);
+
+                console.log("Highest:", highest);
+                console.log("Lowest:", lowest);
+
+            let arr = [34, 1, 78, 3, 12];
+                console.log(arr.sort((a, b) => a - b)); // ascending
+                console.log(arr.sort((a, b) => b - a)); // descending
+
+                let items = [10, 20, 30, 40, 50, 60];
+                // Remove element at index 4 (value = 50), and add 2 new values
+                items.splice(4, 1, 500, 600);
+                console.log(items);
+
+    </script>
+
+</body>
+</html>
